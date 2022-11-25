@@ -15,3 +15,9 @@
 <script src="${path0 }/include/jquery.js"></script>
 <link rel="stylesheet" href="${path0 }/include/foundation.css">
 <link rel="stylesheet" href="${path0 }/include/foundation.mini.css">	
+<script>
+  $(document).foundation();
+</script>
+<style>
+
+</style>

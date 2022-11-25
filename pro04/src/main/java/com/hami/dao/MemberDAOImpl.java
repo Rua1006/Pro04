@@ -24,5 +24,11 @@ public class MemberDAOImpl implements MemberDAO{
 		return sqlSession.selectOne("member.getMember", id);
 	}
 
+	@Override
+	public void memberInsert(MemberDTO dto) throws Exception {
+		sqlSession.insert("member.memberInsert", dto);
+		
+	}
+
 	
 }

@@ -7,4 +7,5 @@ import com.hami.dto.MemberDTO;
 public interface MemberDAO {
 	public List<MemberDTO> memberList() throws Exception;
 	public MemberDTO getMember(String id) throws Exception;
+	public void memberInsert(MemberDTO dto) throws Exception;
 }

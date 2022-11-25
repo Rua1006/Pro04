@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,14 +24,14 @@ public class MemberController {
 	MemberService memberService;
 	
 	//member/list.do -> MemberService -> MemberDAO -> MyBatis(memberMapper) -> DB
-	//localhost:8093/member/list.do
+	//localhost:8092/member/list.do
 	@RequestMapping(value="list.do", method = RequestMethod.GET)
 	public String memberList(Model model) throws Exception{
 		List<MemberDTO> memberList = memberService.memberList();
 		model.addAttribute("memberList", memberList);
 		return "member/memberList";
 	}
-	//localhost:8093/member/getMember.do
+	//localhost:8092/member/getMember.do
 	@RequestMapping(value="getMember.do", method = RequestMethod.GET)
 	public String getMember(HttpServletRequest request, Model model)throws Exception{
 		String id = request.getParameter("id");
@@ -39,13 +40,21 @@ public class MemberController {
 		return "member/memberDetail";
 	}
 	
-	/*
-	 * @PostMapping(value="addMember.do") public String addMember(HttpServletRequest
-	 * request, Model model)throws Exception{ String id =
-	 * request.getParameter("id"); String pw = request.getParameter("pw"); String
-	 * name = request.getParameter("name"); String email =
-	 * request.getParameter("email"); String tel = request.getParameter("tel");
-	 * 
-	 * }
-	 */
+	@GetMapping("insert.do")
+	public String insertForm(HttpServletRequest request, Model model) throws Exception{
+		return "member/memberInsert";
+	}
+	
+	@PostMapping("insert.do")
+	public String memberInsert(HttpServletRequest request, Model model) throws Exception{
+		MemberDTO dto = new MemberDTO();
+		dto.setId(request.getParameter("id"));
+		dto.setPw(request.getParameter("pw"));
+		dto.setName(request.getParameter("name"));
+		dto.setEmail(request.getParameter("email"));
+		dto.setTel(request.getParameter("tel"));
+		memberService.memberInsert(dto);
+		return "redirect:list.do";
+	}
+	
 }

@@ -24,4 +24,11 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.getMember(id);
 	}
 
+	@Override
+	public void memberInsert(MemberDTO dto) throws Exception {
+		memberDAO.memberInsert(dto);
+		
+	}
+	
+
 }
