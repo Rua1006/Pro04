@@ -26,28 +26,32 @@
       <table>
       	<tbody>
       		<tr>
-      			<th>글 제목</th>
-      			<td>
-      				<input type="hidden" name="bno" id="bno" value="${dto.bno }" >
-      				<input type="text" name="title" id="title" placeholder="제목 입력" value="${dto.title }" maxlength="90" required>
-      			</td>
-      		</tr>	
-      		<tr>
-      			<th>글 내용</th>
-      			<td>
-      				<textarea placeholder="내용입력" name="content" id="content" rows="8" cols="10" maxlength="800" required>${dto.content }</textarea>
-      				<script>
-      				CKEDITOR.replace('content', {filebrowserUploadUrl:'/free/imageUpload.do'});
-      				</script>
-      			</td>
-      		</tr>
+     			<th>글 제목</th>
+     			<td>
+     				<input type="hidden" name="seq" id="seq" value="${dto.bno }" >
+     				<input type="text" name="title" id="title" placeholder="제목 입력" value="${dto.title }" maxlength="98" required>
+     			</td>
+     		</tr>
+     		<tr>
+     			<th>글 내용</th>
+     			<td>
+     				<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="800" required>
+     				${dto.content }
+     				</textarea>
+     				<script>
+     				CKEDITOR.replace('content',	{filebrowserUploadUrl:'/free/imageUpload.do'});
+     				</script>
+     			</td>
+     		</tr>
+     		<tr>
+     			<td colspan="2">
+     				<input type="submit" class="submit success button" value="글 수정" >
+     				<a class="button" href="${path1 }/free/list.do">글 목록</a>
+     			</td>
+     		</tr>
       	</tbody>	
       </table>
       </form>
-      <div class="button-group">
-       <input type="submit" class="submit success button" value="수정">
-     	<a class="button" href="${path1 }/free/list.do">글 목록</a>
-      </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>

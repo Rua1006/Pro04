@@ -26,28 +26,30 @@
       <form action="${path1 }/free/insert.do" method="post" name="insert" id="insert">
       <table>
       	<tbody>
-      		<tr>
-      			<th>글 제목</th>
-      			<td>
-      				<input type="text" placeholder="제목입력" maxlength="90"  id="title" name="title" required>
-      			</td>
-      		</tr>
-      		<tr>
-      			<th>글 내용</th>
-      			<td>
-      				<textarea placeholder="내용입력" rows="8" cols="10" maxlength="800" id="content" name="content" required></textarea>
-      				<script>
-      				CKEDITOR.replace('content', {filebrowserUploadUrl:'/free/imageUpload.do'});
-      				</script>
-      			</td>
-      		</tr>
+     		<tr>
+   			<th>글 제목</th>
+   			<td>
+   				<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
+   			</td>
+	   		</tr>
+	   		<tr>
+   			<th">글 내용</th>
+   			<td>
+				<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="800" required></textarea>
+  				<script>
+  				CKEDITOR.replace('content',	{filebrowserUploadUrl:'/free/imageUpload.do'});
+  				</script>
+  			</td>
+	   		</tr>
+	   		<tr>
+	   			<td colspan="2">
+	   				<input type="submit" class="submit success button" value="글 등록" >
+	   				<a class="button" href="${path1 }/free/list.do">글 목록</a>
+	   			</td>
+    		</tr>
       	</tbody>
       </table>
       </form>
-      <div class="button-group">
-      <input type="submit" class="submit success button" value="등록">
-      <a class="button" href="${path1 }/free/list.do">글 목록</a>
-      </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>

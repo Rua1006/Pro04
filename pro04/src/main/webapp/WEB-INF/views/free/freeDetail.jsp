@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지사항 목록</title>
+	<title>자유게시판 목록</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
@@ -21,34 +21,34 @@
 <jsp:include page="../include/header.jsp"></jsp:include>
 </header>
     <div class="row column text-center">
-      <h2>공지사항 상세보기</h2>
+      <h2>자유게시판 상세보기</h2>
       <hr>
       <table>
       	<tbody>
       		<tr>
-      			<th>글번호</th>
+      			<th>글 번호</th>
       			<td>${dto.bno }</td>
-      		</tr>
+      		</tr>	
       		<tr>
       			<th>글 제목</th>
       			<td>${dto.title }</td>
       		</tr>
       		<tr>
       			<th>글 내용</th>
-      			<td>${dto.content }</td>
+      			<td><p>${dto.content }</p></td>
       		</tr>
       		<tr>
       			<th>작성자</th>
       			<td>${dto.id }</td>
       		</tr>
       		<tr>
-      			<th>작성일</th>
-      			<td>${dto.resdate }</td>
+      			<th>작성일시</th>
+      			<td>${dto.regdate }</td>
       		</tr>
       		<tr>
-      			<th>조회수</th>
+      			<th>읽은 횟수</th>
       			<td>${dto.visited }</td>
-      		</tr>	
+      		</tr>
       	</tbody>
       </table>
     <div class="button-group">

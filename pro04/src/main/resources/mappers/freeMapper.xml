@@ -7,8 +7,12 @@
 	<select id="getFree" resultType="com.hami.dto.FreeDTO">
 		select * from free where bno=#{bno}
 	</select>
+	<!-- 글 수 카운트 -->
+	<select id="totalCount" resultType="integer" >
+		select count(*) from free
+	</select>
 	<insert id="freeInsert">
-		insert into free values((select nvl(max(bno), 0)+1 from free), #{title}, #{content}, 'admin', sysdate, 0)
+		insert into free values ((select nvl(max(bno), 0)+1 from free), #{title}, #{content}, sysdate, 0, 'admin', 0)
 	</insert>
 	<delete id="freeDelete">
 		delete from free where bno=#{bno}

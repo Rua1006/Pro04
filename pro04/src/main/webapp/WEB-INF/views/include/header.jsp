@@ -44,11 +44,17 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><a href="#">로그인</a></li>
-      <li><a href="${path1 }/member/insert.do">회원가입</a></li>
-      <li><a href="#">로그아웃</a></li>
-      <li><a href="#">회원목록</a></li>
-      <li><a href="#">관리자</a></li>
+      <c:if test="${empty sid }">
+        <li><a href="${path1 }/member/loginForm.do">로그인</a></li>
+        <li><a href="${path1 }/member/agree.do">회원가입</a></li>
+      </c:if>
+      <c:if test="${not empty sid }">  
+        <li><a href="${path1 }/member/logout.do">로그아웃</a></li>
+        <li><a href="${path1 }/member/read.do">회원정보</a></li>
+      </c:if>  
+      <c:if test='${sid eq "admin"}'>
+        <li><a href="#">관리자 페이지</a></li>
+      </c:if>
     </ul>
   </div>
 </div>

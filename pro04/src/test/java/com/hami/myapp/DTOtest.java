@@ -18,7 +18,7 @@ public class DTOtest {
 		dto.setEmail("kbs@naver.com");
 		dto.setPt(10);
 		dto.setTel("010-0000-0000");
-		dto.setRegDate("2022-11-23");
+		dto.setRegdate("2022-11-23");
 		
 		Logger.info(dto.toString());
 		
