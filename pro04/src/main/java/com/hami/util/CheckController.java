@@ -3,7 +3,6 @@ package com.hami.util;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,12 +11,10 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hami.dto.MemberDTO;
-import com.hami.util.Member;
-import com.hami.util.MemberVO;
-import com.hami.util.MemberValidator;
 
 //http://localhost:8092/check/
 @Controller
@@ -31,8 +28,12 @@ public class CheckController {
 	
 	//view(jsp)에서 input의 pattern과 required에 의한 검증
 	@RequestMapping(value="check1", method = RequestMethod.POST)
-	public String postCheck1(@ModelAttribute("mem") MemberDTO member, Model model) throws Exception {
-		return "check/result1";	//${mem.id}, ${mem.pw}
+	public String postCheck1(HttpServletRequest request, Model model) throws Exception{
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		model.addAttribute("id", id);
+		model.addAttribute("pw", pw);
+		return "check/result1";
 	}
 	
 	@RequestMapping(value="check2", method = RequestMethod.GET)
@@ -42,8 +43,10 @@ public class CheckController {
 	
 	//view(jsp)에서 javascript에 의한 검증
 	@RequestMapping(value="check2", method = RequestMethod.POST)
-	public String postCheck2(@ModelAttribute("mem") MemberDTO member, Model model) throws Exception {
-		return "check/result2";	//${mem.id}, ${mem.pw}
+	public String postCheck2(@RequestParam("id") String id, @RequestParam("pw") String pw, Model model) throws Exception{
+		model.addAttribute("id", id);
+		model.addAttribute("pw",pw);
+		return "check/result2";
 	}
 	
 	@RequestMapping(value="check3", method = RequestMethod.GET)
@@ -52,9 +55,12 @@ public class CheckController {
 	}
 	
 	//view(jsp)에서 jQuery에 의한 검증
-	@RequestMapping(value="check3", method = RequestMethod.POST)
-	public String postCheck3(@ModelAttribute("mem") MemberDTO member, Model model) throws Exception {
-		return "check/result3";	//${mem.id}, ${mem.pw}
+	@RequestMapping(value="check3.do", method = RequestMethod.GET)
+	public String postCheck3(@RequestParam("id") String id, @RequestParam("pw") String pw, Model model) throws Exception {
+		model.addAttribute("id", id);
+		model.addAttribute("pw", pw);
+		return "check/result3";
+		
 	}
 	
 	@RequestMapping(value="check4", method = RequestMethod.GET)
@@ -64,21 +70,15 @@ public class CheckController {
 
 	//Validator에 의한 검증(@Valid) 
 	@RequestMapping(value="check4", method = RequestMethod.POST)
-	public ModelAndView postCheck4(@ModelAttribute("member") @Valid Member member, Model model, BindingResult result) throws Exception {
-		
-		ModelAndView mav = new ModelAndView();
-		
-	    MemberValidator valid = new MemberValidator();
-	    valid.validate(valid, result);
+	public String postCheck4(@ModelAttribute("member") Member member, Model model, BindingResult result) throws Exception {
+		String page = "check/result4";
+	    MemberValidator userValidator = new MemberValidator();
+	    userValidator.validate(member, result);
 		
 	    if(result.hasErrors()) {
-	    	mav.addObject("member", member);
-	    	mav.setViewName("check/error4");
-	    	return mav;
+	    	page = "check/error4";
 	    }
-	    mav.addObject("member", member);
-	    mav.setViewName("check/result4");
-	    return mav;
+	    return page;
 	}
 	
 	@InitBinder
@@ -102,19 +102,4 @@ public class CheckController {
 	    return path;
 	}
 
-	@RequestMapping(value="check6", method = RequestMethod.GET)
-	public String getCheck6(@ModelAttribute("member") @Valid MemberVO member, Model model, BindingResult result) throws Exception {
-		return "check/check6";
-	}
-
-	//Validator에 의한 검증(@Valid) 
-	@RequestMapping(value="check6", method = RequestMethod.POST)
-	public String postCheck6(@ModelAttribute("member") @Valid MemberVO member, Model model, BindingResult result) throws Exception {
-	
-	    String path = "check/result6";
-	    if(result.hasErrors()) {
-	        path = "check/error6";
-	    }
-	    return path;
-	}
 }

@@ -34,12 +34,12 @@
 			alert("비밀번호의 글자수가 일치하지 않습니다.");
 			return false;
 		}
-		var idReg = /^[a-z0-9]{5,12}$/g;
+		var idReg = /^[a-z0-9]{5,12}$/g;	//아이디 정규표현식
 		if(!idReg.test(id)){
 			alert("아이디 입력형식이 옳바르지 않습니다.");
 			return;
 		}
-		var pwReg = /^[a-z0-9]{6,12}$/g;
+		var pwReg = /^[a-z0-9]{6,12}$/g;	//비밀번호 정규표현식
 		if(!pwReg.test(pw)){
 			alert("비밀번호 입력형식이 옳바르지 않습니다.")
 			return;
