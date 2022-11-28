@@ -140,18 +140,21 @@
    			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
     		<version>1.16</version>
 		</dependency>
+		
 		<!-- 스프링 트랜잭션 라이브러리 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
 		<!-- 스프링 jdbc 라이브러리 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		
 		<!-- commons-dbcp : 자바 웹 DB 연결 공용 라이브러리 -->
 		<dependency>
 		    <groupId>commons-dbcp</groupId>

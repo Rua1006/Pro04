@@ -33,7 +33,7 @@
    			</td>
 	   		</tr>
 	   		<tr>
-   			<th">글 내용</th>
+   			<th>글 내용</th>
    			<td>
 				<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="800" required></textarea>
   				<script>
