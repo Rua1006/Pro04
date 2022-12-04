@@ -24,6 +24,8 @@
 	<resources mapping="/databank/**" location="/WEB-INF/views/databank" />
 	<resources mapping="/util/**" location="/WEB-INF/views/util" />
 	<resources mapping="/sample/**" location="/WEB-INF/views/sample" />
+	<resources mapping="/check/**" location="/WEB-INF/views/check" />
+	<resources mapping="/user/**" location="/WEB-INF/views/user" />
 	<resources mapping="/free/**" location="/WEB-INF/views/free" />
 	
 	

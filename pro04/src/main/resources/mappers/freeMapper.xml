@@ -20,4 +20,7 @@
 	<update id="freeEdit">
 		update free set title=#{title}, content=#{content} where bno=#{bno}
 	</update>
+	<update id="visitCount">
+		update free set visited=visited+1 where bno=#{bno}
+	</update>
 </mapper>

@@ -3,27 +3,39 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<div class="callout large secondary">
-  <div class="row">
-    <div class="large-4 columns">
-      <h5>Vivamus Hendrerit Arcu Sed Erat Molestie</h5>
-      <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit.</p>
-    </div>
-    <div class="large-3 large-offset-2 columns">
-      <ul class="menu vertical">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
-    </div>
-    <div class="large-3 columns">
-      <ul class="menu vertical">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<c:set var="path3" value="${pageContext.request.contextPath }" />
+<!-- 푸터 내용 기술 -->
+<article class="ft_wrap">
+	<div class="footer-nav-left">
+	  <p class="footer-copyright">©2022 Company WebApplication</p>
+	</div>
+	<div class="footer-nav-center">
+	  <ul class="footer-nav-menu">
+	    <li class="footer-nav-item">
+	      <a href="https://get.foundation/develop/getting-started.html">Building Blocks</a>
+	    </li>
+	    <li class="footer-nav-item">
+	      <a href="https://get.foundation/get-involved/support.html">Get Involved</a>
+	    </li>
+	    <li class="footer-nav-item">
+	      <a href="https://get.foundation/sites/docs/">Docs</a>
+	    </li>
+	  </ul>
+	</div>
+	<div class="footer-nav-right">
+	  <ul class="footer-nav-menu-icons">
+	    <li class="footer-nav-item">
+	      <a href="get-involved/support.html"><img class="footer-social-icon" src="${path3 }/resources/icon/email-icon.svg" alt=""></a>
+	    </li>
+	    <li class="footer-nav-item">
+	      <a href="https://www.facebook.com/foundation/"><img class="footer-social-icon" src="${path3 }/resources/icon/facebook-icon.svg" alt=""></a>
+	    </li>
+	    <li class="footer-nav-item">
+	      <a href="https://twitter.com/FoundationCSS"><img class="footer-social-icon" src="${path3 }/resources/icon/twitter-icon.svg" alt=""></a>
+	    </li>
+	    <li class="footer-nav-item">
+	      <a href="https://www.youtube.com/channel/UCS7eqSwmBYuslPEKeJBq-kg"><img class="footer-social-icon" src="${path3 }/resources/icon/youtube-icon.svg" alt=""></a>
+	    </li>
+	  </ul>
+	</div>
+</article>

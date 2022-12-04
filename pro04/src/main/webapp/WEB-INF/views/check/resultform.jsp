@@ -9,13 +9,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>결과1</title>
+	<title>결과</title>
 </head>
 <body>
-	<h2>결과1</h2>
+	<h2>결과</h2>
 	<div>
-		<p>${id }</p>
-		<p>${pw }</p>
+		<p>${vo.id }</p>
+		<p>${vo.email }</p>
 	</div>
 </body>
 </html>
