@@ -7,7 +7,7 @@ public class FreeDTO {
 	private int bno;
 	private String title;
 	private String content;
-	private String regdate;
+	private String resdate;
 	private int visited;
 	private String id;
 	private int rec;
