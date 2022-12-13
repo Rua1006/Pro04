@@ -7,18 +7,18 @@
 <!-- 푸터 내용 기술 -->
 <article class="ft_wrap">
 	<div class="footer-nav-left">
-	  <p class="footer-copyright">©2022 Company WebApplication</p>
+	  <p class="footer-copyright">© Hanmi Pharm.Co.,Ltd.</p>
 	</div>
 	<div class="footer-nav-center">
 	  <ul class="footer-nav-menu">
 	    <li class="footer-nav-item">
-	      <a href="https://get.foundation/develop/getting-started.html">Building Blocks</a>
+	      <a href="https://get.foundation/develop/getting-started.html">전자공고</a>
 	    </li>
 	    <li class="footer-nav-item">
-	      <a href="https://get.foundation/get-involved/support.html">Get Involved</a>
+	      <a href="https://get.foundation/get-involved/support.html">개인정보처리방침</a>
 	    </li>
 	    <li class="footer-nav-item">
-	      <a href="https://get.foundation/sites/docs/">Docs</a>
+	      <a href="https://get.foundation/sites/docs/">신규업체품목등록</a>
 	    </li>
 	  </ul>
 	</div>

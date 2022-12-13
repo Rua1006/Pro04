@@ -26,12 +26,15 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <script>
   $(document).ready(function(){
 	  $(document).foundation();
   });
 </script>
 <style>
+body, html, * { font-family: 'Noto Sans KR', sans-serif; }
+
 ul { list-style:none; }
 
 #gnb > ul > li[role="menuitem"] { height:38px; }

@@ -11,6 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>로그인</title>
+	<style>
+	.content {height: 100vh;}
+	.table_form {width: 80%; margin: 0 auto;}
+	.h1 {margin-top: 100px;}
+	</style>
 	<!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
@@ -22,8 +27,7 @@
 	
 	<div class="content" id="con">
 	    <div class="row column text-center">
-	      <h2 class="h1">로그인</h2>
-	      <hr>
+	      <h2 class="h1" style="margin-top: 25vh;">로그인</h2>
 	      <div class="container">
 				<c:if test="${!empty msg }">
 				<script>
@@ -36,13 +40,13 @@
 					<table class="table_form">
 						<tbody>
 							<tr>
-								<th><label for="id">아이디</label></th>
+								<th><label for="id"><strong>아이디</strong></label></th>
 								<td><input type="text" name="id" id="id" size="100" class="single100" placeholder="아이디 입력" required>
 								<!--  pattern="^[a-z0-9]+$"  -->
 								</td>
 							</tr>				
 							<tr>
-								<th><label for="pw">비밀번호</label></th>
+								<th><label for="pw"><strong>비밀번호</strong></label></th>
 								<td><input type="password" name="pw" id="pw"  class="single100" placeholder="비밀번호 입력" required>
 								<!--  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  -->
 								</td>
@@ -65,9 +69,9 @@
 	      </div>
 	    </div>
 	</div>
-    <footer id="footer" class="footer-nav row expanded collapse">
-    	<!-- 푸터 부분 인클루드 -->
-    	<jsp:include page="../include/footer.jsp"></jsp:include>
-    </footer>
 </body>
+<footer id="footer" class="footer-nav row expanded collapse">
+   	<!-- 푸터 부분 인클루드 -->
+  	<jsp:include page="../include/footer.jsp"></jsp:include>
+</footer>
 </html>

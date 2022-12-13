@@ -23,18 +23,20 @@
 <header id="header">
 	<!-- 헤더 부분 인클루드 -->
 	<jsp:include page="include/header.jsp"></jsp:include>
+	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+      <ul class="orbit-container">
+        <li class="orbit-slide is-active">
+          <img class="header_img" src="${path1 }/resources/img/main_sub.jpg" alt="hami" style="width: 100vw; height: 100vh; overflow: hidden;">
+        </li>
+      </ul>
+    </div>
 </header>
 	<hr>
 <article class="grid-container">
       <div class="grid-x grid-margin-x">
-    
-        <div class="medium-7 large-6 cell">
-          <h1>창조와 혁신, 도전</h1>
-          <p class="subheader">There is beauty in space, and it is orderly. There is no weather, and there is regularity. It is predictable. Everything in space obeys the laws of physics. If you know these laws, and obey them, space will treat you kindly.</p>
-          <button class="button">Take a Tour</button>
-          <button class="button">Start a free trial</button>
+        <div class="medium-7 large-6 cell" style="margin-top: 100px; text-align: center; font-weight: 600; font-size: 50px;">
+          <span>창조와 혁신, 도전</span>
         </div>
-    
         <div class="show-for-large large-3 cell">
           <img src="${path2 }/resources/img/logo.jpg" alt="picture of space">
         </div>
@@ -107,56 +109,56 @@
     </div>
     
     <div class="">
-      <p class="lead">Trending Planetary Destinations</p>
+      <p class="lead">한미약품을 빛낸 상품</p>
     </div>
     
     <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/any" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>일반의약품</p>
+          <p class="pic"><img src="${path2 }/resources/img/main1.png" alt="main1"></p>
+       		<p class="lead"><strong>케어가글</strong></p>
+          <p class="subheader">약국에서 판매하는 '일반의약품' 구강청결제</p>
         </div>
       </div>
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/animals" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>일반의약품</p>
+          <p class="pic"><img src="${path2 }/resources/img/main2.png" alt="main2"></p>
+          <p class="lead"><strong>텐텐츄정</strong></p>
+          <p class="subheader">성분강화 어린이 영양제</p>
         </div>
       </div>
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/nature" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>일반의약품</p>
+          <p class="pic"><img src="${path2 }/resources/img/main3.png" alt="main3"></p>
+          <p class="lead"><strong>비엘비정</strong></p>
+          <p class="subheader">고함량 활성형 메가비타민</p>
         </div>
       </div>
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/tech" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>의료기기</p>
+          <p class="pic"><img src="${path2 }/resources/img/main4.png" alt="main4"></p>
+          <p class="lead"><strong>HANMI COVID-19 Quick TEST</strong></p>
+          <p class="subheader">COVID-19 신속항원진단키트</p>
         </div>
       </div>
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/arch" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>일반의약품</p>
+          <p class="pic"><img src="${path2 }/resources/img/main5.png" alt="main5"></p>
+          <p class="lead"><strong>코앤쿨나잘스프레이</strong></p>
+          <p class="subheader">코막힘/콧물 2중 복합작용, 뿌리는 비염 치료제</p>
         </div>
       </div>
       <div class="cell">
         <div class="callout">
-          <p>Pegasi B</p>
-          <p class="pic"><img src="https://placeimg.com/400/370/people" alt="image of a planet called Pegasi B"></p>
-          <p class="lead">Copernican Revolution caused an uproar</p>
-          <p class="subheader">Find Earth-like planets life outside the Solar System</p>
+          <p>일반의약품</p>
+          <p class="pic"><img src="${path2 }/resources/img/main6.png" alt="main6"></p>
+          <p class="lead"><strong>목앤스프레이</strong></p>
+          <p class="subheader">염증완화/항균 2중 효과, 뿌리는 인후염 치료제</p>
         </div>
       </div>
     

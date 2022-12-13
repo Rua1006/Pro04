@@ -15,13 +15,18 @@
 	<title>자유게시판 목록</title>
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+	.content {height: 100vh;}
+	.table_form {width: 80%; margin: 0 auto;}
+	.h2 {margin-top: 40px;}
+	</style>
 </head>
 <body>
 <header id="head">
 <jsp:include page="../include/header.jsp"></jsp:include>
 </header>
-    <div class="row column text-center">
-      <h2>자유게시판 상세보기</h2>
+    <div class="content row column text-center">
+      <h2 class="h2">자유게시판 상세보기</h2>
       <hr>
       <table>
       	<tbody>
@@ -63,7 +68,8 @@
       $(document).foundation();
     </script>
 </body>
-<footer id="foot">
-<jsp:include page="../include/footer.jsp"></jsp:include>	
+<footer id="footer" class="footer-nav row expanded collapse">
+   	<!-- 푸터 부분 인클루드 -->
+  	<jsp:include page="../include/footer.jsp"></jsp:include>
 </footer>
 </html>
