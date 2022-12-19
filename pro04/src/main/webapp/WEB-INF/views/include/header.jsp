@@ -18,7 +18,7 @@
        <li>
       	<a href="#">기업</a>
       	<ul class="menu">
-      	<li><a href="#">인사말</a></li>
+      	<li><a href="<%=request.getContextPath() %>/ceo.jsp">인사말</a></li>
       	<li><a href="#">소개</a></li>
       	<li><a href="#">뉴스</a></li>
  		</ul>

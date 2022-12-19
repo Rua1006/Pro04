@@ -26,7 +26,7 @@
 	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
       <ul class="orbit-container">
         <li class="orbit-slide is-active">
-          <img class="header_img" src="${path1 }/resources/img/main_text.gif" alt="hami" style="width: 100vw; height: 100vh; overflow: hidden;">
+          <img class="header_img" src="${path1 }/resources/img/main_sub.jpg" alt="hami" style="width: 100vw; height: 100vh; overflow: hidden;">
         </li>
       </ul>
     </div>

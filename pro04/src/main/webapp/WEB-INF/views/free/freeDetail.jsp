@@ -48,7 +48,7 @@
       		</tr>
       		<tr>
       			<th>작성일시</th>
-      			<td>${dto.regdate }</td>
+      			<td>${dto.resdate }</td>
       		</tr>
       		<tr>
       			<th>읽은 횟수</th>
